@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu cuenta</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .contenedor {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Tu cuenta</h1>
+        <div id="datosUsuario"></div>
+    </div>
+
+    <script>
+        const datosGuardados = localStorage.getItem("usuarioRegistrado");
+
+        if (datosGuardados) {
+            const datos = JSON.parse(datosGuardados);
+
+            const contenedor = document.getElementById("datosUsuario");
+            contenedor.innerHTML = `
+                <p><strong>Usuario:</strong> ${datos.Usuario}</p>
+                <p><strong>Email:</strong> ${datos.Email}</p>
+            `;
+        } else {
+            document.getElementById("datosUsuario").textContent = "No hay datos de usuario guardados.";
+        }
+    </script>
+</body>
+</html>
