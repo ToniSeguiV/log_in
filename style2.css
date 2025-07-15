@@ -1,0 +1,22 @@
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    max-width: 300px;
+    height: 200vh;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+.contenedor {
+    color:white;
+    max-width: 300px;
+    height: 895px;
+    background-color:#4b6cb7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+#datosUsuario{}
